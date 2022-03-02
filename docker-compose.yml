@@ -16,3 +16,22 @@ services:
       - ./data-mosquitto/data:/mosquitto/data
       - ./data-mosquitto/log:/mosquitto/log
       
+
+  zigbee2mqtt:
+    container_name: zigbee2mqtt
+    depends_on:
+      - mosquitto
+    image: koenkk/zigbee2mqtt
+    volumes:
+      - ./data-zigbee2mqtt:/app/data
+      - /run/udev:/run/udev:ro
+    devices:
+      - /dev/ttyACM0:/dev/ttyACM0
+    deploy:
+      resources:
+        limits:
+          memory: 100M
+    restart: always
+    privileged: true
+    environment:
+      - TZ=Europe/Prague
