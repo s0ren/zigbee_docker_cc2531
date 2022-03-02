@@ -1,0 +1,9 @@
+﻿homeassistant: true
+permit_join: true
+mqtt:
+  base_topic: zigbee2mqtt
+  server: 'mqtt://{PC_IP_ADDRESS}:1883'
+serial:
+  port: /dev/ttyACM0
+advanced:
+    network_key: GENERATE
