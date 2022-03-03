@@ -2,8 +2,10 @@
 permit_join: true
 mqtt:
   base_topic: zigbee2mqtt
-  server: 'mqtt://{PC_IP_ADDRESS}:1883'
+  server: mqtt://192.168.1.232:1883
+frontend:
+  port: 8080
 serial:
   port: /dev/ttyACM0
 advanced:
-    network_key: GENERATE
+  network_key: GENERATE
