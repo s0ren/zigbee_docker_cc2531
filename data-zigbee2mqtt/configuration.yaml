@@ -1,0 +1,30 @@
+homeassistant: true
+permit_join: true
+mqtt:
+  base_topic: zigbee2mqtt
+  server: mqtt://192.168.1.232:1883
+frontend:
+  port: 8080
+serial:
+  port: /dev/ttyACM0
+advanced:
+  network_key:
+    - 126
+    - 80
+    - 19
+    - 148
+    - 213
+    - 153
+    - 80
+    - 75
+    - 230
+    - 50
+    - 83
+    - 93
+    - 145
+    - 202
+    - 54
+    - 116
+devices:
+  '0x000d6ffffe1e7fbb':
+    friendly_name: '0x000d6ffffe1e7fbb'
