@@ -102,3 +102,14 @@ Add to `data-ha/configuration.yaml`
     will_message:
         topic: 'hass/status'
         payload: 'offline'
+
+
+
+## web frontend
+
+Gå til http://192.168.1.232:8123/
+
+Under _instillinger_ -> _Enheder og tjænester_ -> _MQTT_
+Broker: 192.168.1.232
+Port: 1883
+
