@@ -36,3 +36,14 @@ check
 
     docker-compose ps
 
+## Mosquitto config
+
+Til `./data-mosquitto/config/mosquitto.conf`, tilføj (i toppen f.eks):
+
+    persistence true
+    persistence_location /mosquitto/data/
+    log_dest file /mosquitto/log/mosquitto.log
+
+    allow_anonymous true
+    listener 1883
+    
