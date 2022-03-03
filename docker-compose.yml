@@ -35,3 +35,32 @@ services:
     privileged: true
     environment:
       - TZ=Europe/Prague
+  postgres:
+    container_name: postgres-ha
+    image: postgres
+    ports:
+    - "5432:5432"
+    volumes:
+    - ./data-postgres/:/var/lib/postgresql/data/
+    deploy:
+    resources:
+        limits:
+          memory: 250M
+          
+  homeassistant:
+    container_name: home-assistant
+    depends_on:
+      - mosquitto
+      - postgres
+    image: homeassistant/home-assistant:stable
+    volumes:
+      - ./data-ha:/config
+    environment:
+      - TZ=Europe/Copenhagen
+    deploy:
+      resources:
+        limits:
+          memory: 250M
+    restart: always
+    ports:
+      - 8123:8123
