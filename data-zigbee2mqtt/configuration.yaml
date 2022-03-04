@@ -7,6 +7,7 @@ frontend:
   port: 8080
 serial:
   port: /dev/ttyACM0
+  adapter: auto
 advanced:
   network_key:
     - 126
@@ -28,3 +29,7 @@ advanced:
 devices:
   '0x000d6ffffe1e7fbb':
     friendly_name: '0x000d6ffffe1e7fbb'
+  '0xd0cf5efffe04ea4d':
+    friendly_name: Lampen på reolen
+  '0xd0cf5efffeb58295':
+    friendly_name: Bo's spot
