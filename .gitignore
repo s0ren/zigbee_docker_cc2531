@@ -1,0 +1,11 @@
+﻿data-ha/.HA_VERSION
+data-ha/home-assistant_v2.db*
+data-ha/home-assistant.log*
+data-ha/.storage/
+data-ha/blueprints/
+data-mosquitto/data/
+data-mosquitto/log/
+data-zigbee2mqtt/coordinator_backup.json
+data-zigbee2mqtt/database.db
+data-zigbee2mqtt/state.json
+data-zigbee2mqtt/log/
